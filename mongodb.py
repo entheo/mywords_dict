@@ -3,7 +3,7 @@ import pymongo
 
 class Data():
     def __init__(self):
-        self.client = pymongo.MongoClient('mongodb://10.0.0.4:27017')
+        self.client = pymongo.MongoClient('mongodb://localhost:27017')
         self.db = self.client['mywords_dict']
 
 

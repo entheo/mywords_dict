@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd696238-5177-4dae-ada0-006df9c419b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mywords_dict/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mywords_dict/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/mini/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb.py" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,13 +28,13 @@
         <counts>
           <entry key="Django Console" value="1109" />
           <entry key="dummy" value="4" />
-          <entry key="py" value="4646" />
+          <entry key="py" value="4677" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="5755" />
+          <entry key="Python" value="5786" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -85,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+            <state relative-caret-position="251">
+              <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -156,13 +157,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mongodb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="225">
+              <caret line="15" column="66" lean-forward="true" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
               <folding>
-                <marker date="1566633702000" expanded="true" signature="190:409" ph="..." />
+                <marker date="1566926466000" expanded="true" signature="191:410" ph="..." />
               </folding>
             </state>
           </provider>
@@ -195,10 +196,10 @@
         <option value="$PROJECT_DIR$/mywords_dict/urls.py" />
         <option value="$PROJECT_DIR$/weixin/urls.py" />
         <option value="$PROJECT_DIR$/weixin/views.py" />
-        <option value="$PROJECT_DIR$/mongodb.py" />
         <option value="$PROJECT_DIR$/memo/views.py" />
         <option value="$PROJECT_DIR$/memo/urls.py" />
         <option value="$PROJECT_DIR$/mywords_dict/settings.py" />
+        <option value="$PROJECT_DIR$/mongodb.py" />
       </list>
     </option>
   </component>
@@ -280,22 +281,7 @@
             <path>
               <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
               <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-              <item name="dict" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
               <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-              <item name="memo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-              <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
@@ -406,13 +392,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.41935483" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.41935483" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -528,16 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongodb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <marker date="1566633702000" expanded="true" signature="190:409" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/memo/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -562,8 +538,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+        <state relative-caret-position="251">
+          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="66" lean-forward="true" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+          <folding>
+            <marker date="1566926466000" expanded="true" signature="191:410" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
