@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd696238-5177-4dae-ada0-006df9c419b9" name="Default Changelist" comment="" />
+    <list default="true" id="fd696238-5177-4dae-ada0-006df9c419b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/mywords_dict/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mywords_dict/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +27,13 @@
         <counts>
           <entry key="Django Console" value="1109" />
           <entry key="dummy" value="4" />
-          <entry key="py" value="4642" />
+          <entry key="py" value="4646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="5751" />
+          <entry key="Python" value="5755" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,16 +85,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="191">
+              <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memo/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -180,6 +182,9 @@
       <find>allow</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -188,12 +193,12 @@
         <option value="$PROJECT_DIR$/memo/mongo.py" />
         <option value="$PROJECT_DIR$/dict/views.py" />
         <option value="$PROJECT_DIR$/mywords_dict/urls.py" />
-        <option value="$PROJECT_DIR$/mywords_dict/settings.py" />
         <option value="$PROJECT_DIR$/weixin/urls.py" />
         <option value="$PROJECT_DIR$/weixin/views.py" />
         <option value="$PROJECT_DIR$/mongodb.py" />
         <option value="$PROJECT_DIR$/memo/views.py" />
         <option value="$PROJECT_DIR$/memo/urls.py" />
+        <option value="$PROJECT_DIR$/mywords_dict/settings.py" />
       </list>
     </option>
   </component>
@@ -258,6 +263,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -400,13 +406,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" weight="0.32991204" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.41935483" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.41935483" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -462,13 +468,6 @@
             <marker date="1566573268000" expanded="true" signature="191:192" ph="..." />
             <marker date="1566573268000" expanded="true" signature="191:197" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -558,6 +557,13 @@
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
         </state>
       </provider>
     </entry>
