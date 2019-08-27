@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="container">
+<!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}{{userInfo.openid}}</text>
+    </block>
+  </view>-->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+<!--搜索框-->
+<view class='search-bar'>
+  <form bindsubmit='toSearch'>
+    
+      <input name='word' placeholder='输入查询的英文单词'></input>
+     
+      <button form-type='submit'>
+      <view class='search-btn'></view>
+      <view>查找</view></button> 
+    
+  </form>
+</view> 
+
+<!--搜索结果-->
+  <view class='trans'>
+    <view wx:for='{{res}}' >
+      <view>{{item}}</view>
+    </view>
+  </view>
+  
+
+  <view>
+  
+  </view>
+<!--添加-->
+
+
+</view>
+
+
+

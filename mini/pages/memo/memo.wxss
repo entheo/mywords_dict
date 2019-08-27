@@ -1,0 +1,10 @@
+/* pages/memo/memo.wxss */
+page{
+  background: white
+}
+
+.memo{
+  text-align: center;
+  padding:10px;
+  line-height: 2.2;
+}

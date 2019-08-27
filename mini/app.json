@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/result/result",
+    "pages/memo/memo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "英汉助记词典",
+    "navigationBarTextStyle":"black"
+  },
+
+ "tabBar": {
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "词典",
+      "iconPath": "miniprogram_npm/weui-miniprogram/tabbar/images/dict.png",
+      "selectedIconPath": "miniprogram_npm/weui-miniprogram/tabbar/images/dict_activated.png"
+    },
+    {
+      "pagePath": "pages/memo/memo",
+      "text": "生词本",
+      "iconPath": "miniprogram_npm/weui-miniprogram/tabbar/images/memo.png",
+      "selectedIconPath": "miniprogram_npm/weui-miniprogram/tabbar/images/memo_activated.png"
+    }
+  ]
+}
+
+}
+
+
+
+

@@ -1,0 +1,35 @@
+<!--输入框-->
+
+<form bindsubmit='toSearch'>
+<view class='searchbar'>
+  <input name='word' value='{{word}}'></input>
+  <button class='search-btn'form-type='submit'>
+    <view class='search-btn-icon'></view>
+  </button>
+  </view>
+</form>
+
+
+<!--展示查询结果-->
+<view class='results-panel'>
+  <view class='results' >
+    <block wx:for='{{trans}}' wx:key='id'>
+      <view>{{item}}</view>
+    </block>
+  </view>
+
+<!--加入生词本-->
+    <view class='add-memo-icon' data-word='{{word}}' bindtap='toAddMemo'></view>
+    <!-->
+  <view class='add-memo-btn'>
+      <form bindsubmit='toAddMemo' data-word='{{word}}'>
+      <button class='add-memo-btn' form-type='submit'>
+        <view class='add-memo-icon'></view>
+      </button>
+      </form>
+  
+  </view>-->
+</view>
+
+
+

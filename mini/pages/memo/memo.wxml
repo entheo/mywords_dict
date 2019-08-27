@@ -1,0 +1,7 @@
+<!--pages/memo/memo.wxml-->
+<view class='memo'>
+<block wx:for='{{words}}' wx:key='id'>
+  <view class='line'>{{item}}</view>
+</block>
+</view>
+

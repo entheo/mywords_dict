@@ -1,0 +1,60 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  
+  font-size: 30px;
+}
+
+input{
+margin-top:20px;
+border:solid 1px lightgray;
+height:50px;
+width:310px;
+text-align:center;
+background-color: #f5efef;
+font-size: 1.1em
+}
+
+button{
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-top:20px;
+border-radius:30px;
+width:100px;
+color:white;
+background-color:#1b9e1b;
+}
+
+.search-bar{
+  margin-top:50px
+}
+
+.search-btn{
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHBhdGggZD0iTTQ2NCAxMjhjLTE4NS42IDAtMzM2IDE1MC40LTMzNiAzMzZzMTUwLjQgMzM2IDMzNiAzMzZjOTIuOCAwIDE3Ni42NC0zNy40NCAyMzcuNDQtOTguMjRDNzYyLjI0IDY0MC45NiA4MDAgNTU2LjggODAwIDQ2NGMwLTE4NS42LTE1MC40LTMzNi0zMzYtMzM2ek02NCA0NjRDNjQgMjQzLjIgMjQzLjIgNjQgNDY0IDY0czQwMCAxNzkuMiA0MDAgNDAwYzAgOTguODgtMzUuODQgMTg5Ljc2LTk1LjY4IDI1OS41Mkw5NTAuNCA5MDUuMjhhMzEuODcyIDMxLjg3MiAwIDEgMS00NS4xMiA0NS4xMmwtMTgyLjQtMTgxLjc2QzY1My40NCA4MjguMTYgNTYyLjg4IDg2NCA0NjQgODY0IDI0My4yIDg2NCA2NCA2ODQuOCA2NCA0NjR6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+  background-size: cover;
+  height:20px;
+  width:20px
+}
+
+
+
+
+
+
