@@ -98,7 +98,7 @@ App({
   //全局变量
   globalData: {
     userInfo: null,
-    host:'http://140.143.45.244:8000',
+    host:'http://10.0.0.4:8080',
     list: [{
         text: "词典",
         pagePath:"../index/index",
