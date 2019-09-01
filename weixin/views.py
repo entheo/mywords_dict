@@ -31,25 +31,25 @@ def is_user(open_id):
 def login(request):
     if request.method == 'POST':
         code = request.POST['code']
+        print('获取code：', code)
         wx = wx_login(code)
         user = is_user(wx['open_id'])
         res = {}
         if user:
-            print(user)
-            res['token'] = generate_token(user['session_key'], user['open_id'])
+            print('找到已注册用户：', user)
             res['open_id'] = user['open_id']
         else:
             u = User()
             m = Memo()
-            u.create(wx['open_id'],wx['session_key'])
+            u.create(wx['open_id'])
             m.create(wx['open_id'])
-            res ['token'] = generate_token(wx['session_key'], wx['open_id'])
-            res ['open_id'] = wx['open_id']
+            res['open_id'] = wx['open_id']
         return JsonResponse(res)
 
-
+'''
+暂时取消，不需要登录态，直接采用openid来自识别用户
 # 生成用户身份token，用来在小程序前端识别登录态
 def generate_token(session_key,openid):
     h = hmac.new(session_key.encode('utf-8'), openid.encode('utf-8'), digestmod='MD5')
     return h.hexdigest()
-
+'''

@@ -1,4 +1,4 @@
-from mongodb import Memo
+from mongodb import Memo, User
 from django.http import JsonResponse
 import json
 
@@ -10,12 +10,14 @@ def create(request):
 
 # 添加到Memo
 def add(request):
-    print(request.body)
+
     open_id = json.loads(request.body.decode('utf-8'))['open_id']
     word = json.loads(request.body.decode('utf-8'))['word']
+    u = User()
+    u.check_user(open_id)
     m = Memo()
     m.add(open_id, word)
-    return JsonResponse({'res':'成功加入'})
+    return JsonResponse({'res':'成功加入生词库'})
 
 # 获得已有Memo
 def find (request):

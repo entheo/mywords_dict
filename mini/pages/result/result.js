@@ -41,12 +41,13 @@ toSearch(e){
 
 addMemo:function(word){
   console.log(word)
+  console.log('openid',wx.getStorageSync('open_id'))
+
   wx.request({
     url: app.globalData.host + '/memo/add',
     method: 'POST',
     data: {
       word: word,
-      token: wx.getStorageSync('token'),
       open_id: wx.getStorageSync('open_id'),
     },
     success(res) {

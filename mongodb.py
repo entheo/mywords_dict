@@ -3,7 +3,7 @@ import pymongo
 
 class Data():
     def __init__(self):
-        self.client = pymongo.MongoClient('mongodb://root:2810033@localhost:27017')
+        self.client = pymongo.MongoClient('mongodb://localhost:27017')
         self.db = self.client['mywords_dict']
 
 
@@ -12,8 +12,21 @@ class User(Data):
         super(User,self).__init__()
         self.col = self.db['user']
 
-    def create(self, openid, session_key):
-        self.col.insert_one({'open_id': openid, 'session_key': session_key})
+    def create(self, openid):
+        self.col.insert_one({'open_id': openid})
+
+    def is_user(self,openid):
+        if self.col.find_one({'open_id':openid}):
+            return
+        else:
+            return False
+
+    # 如果没有用户，那么添加
+    def check_user(self,openid):
+        if not self.is_user(openid):
+            self.create(openid)
+            m = Memo()
+            m.create(openid)
 
 
 class Memo(Data):
@@ -26,9 +39,8 @@ class Memo(Data):
         self.col.insert_one({'open_id': openid, 'words':words})
 
     def add(self,openid,word):
-        print(openid,word)
         u = self.col.find_one({'open_id':openid})
-        print(u)
+        print('被添加用户:', u)
         if u['words']:
             new_words = u['words']
             if word not in new_words:

@@ -41,38 +41,48 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res)
-        wx.request({
-          url: this.globalData.host + '/weixin/login/',
-          method: 'POST',
-          header: {
-            'Content-Type': 'application/x-www-form-urlencoded'},
-          data: {
-            code: res.code,
-            hi:'hinihoa'
-          },
-          success: res => {
-            console.log(res.data)
-            wx.setStorageSync('token', res.data.token)
-            wx.setStorageSync('open_id', res.data.open_id)
-            callback()
-          },
+        if(res.code){
+          console.log('登录code:',res.code)
+          wx.request({
+            url: this.globalData.host + '/weixin/login/',
+            method: 'POST',
+            header: {
+              'Content-Type':    'application/x-www-form-urlencoded'},
+            data: {
+              code: res.code,
+            },
+            success: res => {
+              console.log('登录请求成功',res.data)
+              wx.setStorageSync('open_id', res.data.open_id)
+              callback()
+            },
+            fail:res=>{
+              console.log('登录失败',res)
+            },
+            complete:res=>{
+              console.log('登录完成',res)
+            }
 
         })
       }
-    })
+      else{
+        consolo.log('登录失败'+res.errMsg)
+      }
+      }
+    },
+    )
   },
 
 //校验并获取用户token
   getToken: function () {
     let promise = new Promise((resolv, reject) => {
-      if (wx.getStorageSync('token') == '') {
+      if (wx.getStorageSync('open_id') == '') {
         this.signUp(function () {
-          resolv('got token')
+          resolv('signed up successfully')
         })
       }
       else {
-        resolv('got token')
+        resolv('Has already signed up')
       }
     })
     return promise
