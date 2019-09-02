@@ -36,7 +36,6 @@ def login(request):
         user = is_user(wx['open_id'])
         res = {}
         if user:
-            print('找到已注册用户：', user)
             res['open_id'] = user['open_id']
         else:
             u = User()

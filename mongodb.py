@@ -3,14 +3,19 @@ import pymongo
 
 class Data():
     def __init__(self):
-        self.client = pymongo.MongoClient('mongodb://localhost:27017')
+        # root登录mongodb
+        self.client = pymongo.MongoClient('mongodb://root:2810033@localhost:27017')
         self.db = self.client['mywords_dict']
+
+        # entheo登录mywordict
+        self.client.mywords_dict.authenticate('entheo', '2810033')
 
 
 class User(Data):
     def __init__(self):
         super(User,self).__init__()
         self.col = self.db['user']
+
 
     def create(self, openid):
         self.col.insert_one({'open_id': openid})

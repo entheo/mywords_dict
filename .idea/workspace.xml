@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd696238-5177-4dae-ada0-006df9c419b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/memo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memo/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/mini/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/mini/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini/pages/result/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/mini/pages/result/result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/mini/project.config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongodb.py" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weixin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/views.py" afterDir="false" />
     </list>
@@ -31,15 +28,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Django Console" value="1282" />
+          <entry key="Django Console" value="1626" />
           <entry key="dummy" value="4" />
-          <entry key="py" value="5021" />
+          <entry key="py" value="5309" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="6303" />
+          <entry key="Python" value="6935" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,6 +52,9 @@
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mywords_dict" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -83,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
             </state>
           </provider>
         </entry>
@@ -100,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="221">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <marker date="1567346573000" expanded="true" signature="171:176" ph="..." />
@@ -123,19 +123,19 @@
         <entry file="file://$PROJECT_DIR$/mywords_dict/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weixin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="178">
+              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1567345886000" expanded="true" signature="718:720" ph="..." />
+                <marker date="1567396812000" expanded="true" signature="718:720" ph="..." />
               </folding>
             </state>
           </provider>
@@ -145,7 +145,7 @@
         <entry file="file://$PROJECT_DIR$/weixin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -156,10 +156,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongodb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="600">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <marker date="1567346476000" expanded="true" signature="191:681" ph="..." />
+                <marker date="1567396488000" expanded="true" signature="324:815" ph="..." />
               </folding>
             </state>
           </provider>
@@ -193,9 +193,9 @@
         <option value="$PROJECT_DIR$/weixin/urls.py" />
         <option value="$PROJECT_DIR$/memo/urls.py" />
         <option value="$PROJECT_DIR$/mywords_dict/settings.py" />
-        <option value="$PROJECT_DIR$/weixin/views.py" />
-        <option value="$PROJECT_DIR$/mongodb.py" />
         <option value="$PROJECT_DIR$/memo/views.py" />
+        <option value="$PROJECT_DIR$/mongodb.py" />
+        <option value="$PROJECT_DIR$/weixin/views.py" />
       </list>
     </option>
   </component>
@@ -278,16 +278,6 @@
               <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
               <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
               <item name="memo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-              <item name="mini" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
-              <item name="mywords_dict" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mywords_dict" type="b2602c69:ProjectViewProjectNode" />
@@ -402,15 +392,15 @@
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Favorites" sideWeight="0.50252527" side_tool="true" weight="0.24959612" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" sideWeight="0.50252527" side_tool="true" weight="0.24959612" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49919224" visible="true" weight="0.41935483" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50080776" side_tool="true" weight="0.41935483" />
+      <window_info anchor="bottom" id="Python Console" sideWeight="0.49919224" weight="0.32991204" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4983845" visible="true" weight="0.41935483" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5016155" side_tool="true" weight="0.41935483" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -515,21 +505,21 @@
     <entry file="file://$PROJECT_DIR$/mywords_dict/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mywords_dict/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weixin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -539,35 +529,35 @@
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/weixin/views.py">
+    <entry file="file://$PROJECT_DIR$/memo/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1567345886000" expanded="true" signature="718:720" ph="..." />
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1567346573000" expanded="true" signature="171:176" ph="..." />
+            <marker date="1567346573000" expanded="true" signature="492:645" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongodb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="600">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
-            <marker date="1567346476000" expanded="true" signature="191:681" ph="..." />
+            <marker date="1567396488000" expanded="true" signature="324:815" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/memo/views.py">
+    <entry file="file://$PROJECT_DIR$/weixin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="178">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1567346573000" expanded="true" signature="171:176" ph="..." />
-            <marker date="1567346573000" expanded="true" signature="492:645" ph="..." />
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1567396812000" expanded="true" signature="718:720" ph="..." />
           </folding>
         </state>
       </provider>

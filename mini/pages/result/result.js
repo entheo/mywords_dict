@@ -51,7 +51,7 @@ addMemo:function(word){
       open_id: wx.getStorageSync('open_id'),
     },
     success(res) {
-      console.log(res)
+      console.log(res.data)
     }
   })
 },

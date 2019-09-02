@@ -76,14 +76,17 @@ App({
 //校验并获取用户token
   getToken: function () {
     let promise = new Promise((resolv, reject) => {
-      if (wx.getStorageSync('open_id') == '') {
-        this.signUp(function () {
-          resolv('signed up successfully')
-        })
-      }
-      else {
-        resolv('Has already signed up')
-      }
+      this.signUp(function(){
+        resolv('got user')
+      })
+      //if (wx.getStorageSync('open_id') == '') {
+        //this.signUp(function () {
+          //resolv('signed up successfully')
+        //})
+      //}
+      //else {
+        //resolv('Has already signed up')
+      //}
     })
     return promise
   },
@@ -108,7 +111,7 @@ App({
   //全局变量
   globalData: {
     userInfo: null,
-    host:'http://10.0.0.4:8080',
+    host:'http://10.0.0.4:8000',
     list: [{
         text: "词典",
         pagePath:"../index/index",
