@@ -29,21 +29,17 @@ def is_user(open_id):
 
 # 小程序用户在后台登录获取token
 def login(request):
+    res = {}
     if request.method == 'POST':
         code = request.POST['code']
         print('获取code：', code)
         wx = wx_login(code)
-        user = is_user(wx['open_id'])
-        res = {}
-        if user:
-            res['open_id'] = user['open_id']
-        else:
-            u = User()
-            m = Memo()
-            u.create(wx['open_id'])
-            m.create(wx['open_id'])
-            res['open_id'] = wx['open_id']
-        return JsonResponse(res)
+        u = User()
+        u.create(wx['open_id'])
+        m = Memo()
+        m.create(wx['open_id'])
+        res['open_id'] = wx['open_id']
+    return JsonResponse(res)
 
 '''
 暂时取消，不需要登录态，直接采用openid来自识别用户

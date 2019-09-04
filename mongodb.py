@@ -1,5 +1,8 @@
 import pymongo
+import datetime
 
+def now():
+    return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 class Data():
     def __init__(self):
@@ -16,13 +19,15 @@ class User(Data):
         super(User,self).__init__()
         self.col = self.db['user']
 
-
     def create(self, openid):
-        self.col.insert_one({'open_id': openid})
+        if not self.is_user(openid):
+            self.col.insert_one({'open_id': openid, 'created_at':now()})
+        else:
+            return False
 
-    def is_user(self,openid):
-        if self.col.find_one({'open_id':openid}):
-            return
+    def is_user(self, openid):
+        if self.col.find_one({'open_id': openid}):
+            return True
         else:
             return False
 
@@ -41,7 +46,10 @@ class Memo(Data):
 
     def create(self, openid):
         words = []
-        self.col.insert_one({'open_id': openid, 'words':words})
+        if not self.find(openid):
+            self.col.insert_one({'open_id': openid, 'words': words, 'created_at': now()})
+        else:
+            return False
 
     def add(self, openid, word):
         # 检查生词是否已存在, 如果没有添加，否则返回已存在状态
@@ -49,7 +57,7 @@ class Memo(Data):
         if not already_has_word:
             new_words = self.find(openid)['words']
             new_words.append(word)
-            self.col.update_one({'open_id': openid}, {'$set': {'words': new_words}})
+            self.col.update_one({'open_id': openid}, {'$set': {'words': new_words, 'updated_at': now()}})
             return True
 
         else:
