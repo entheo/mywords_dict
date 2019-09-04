@@ -1,4 +1,13 @@
 /**index.wxss**/
+
+.input-area{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  width: 310px;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -22,12 +31,9 @@
 }
 
 input{
-margin-top:20px;
-border:solid 1px lightgray;
 height:50px;
-width:310px;
+width:270px;
 text-align:center;
-background-color: #f5efef;
 font-size: 1.1em
 }
 

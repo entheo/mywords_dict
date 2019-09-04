@@ -2,19 +2,25 @@
 
 <form bindsubmit='toSearch'>
 <view class='searchbar'>
-  <input name='word' value='{{word}}'></input>
-  <button class='search-btn'form-type='submit'>
-    <view class='search-btn-icon'></view>
-  </button>
+  <view class="input-area">
+    <input name='word' value='{{word}}' bindconfirm="toConfirmSearch" focus='{{focus}}'></input>
+    <icon type="clear" size="15" bindtap="toClear"></icon>
+    <!--
+    <view id="clear" bindtap="toClear">  
+    </view>-->
+  </view>
+
   </view>
 </form>
+
+
 
 
 <!--展示查询结果-->
 <view class='results-panel'>
   <view class='results' >
     <block wx:for='{{trans}}' wx:key='id'>
-      <view>{{item}}</view>
+      <view class='trans-line'>{{item}}</view>
     </block>
   </view>
 

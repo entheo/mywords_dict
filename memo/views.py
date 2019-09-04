@@ -16,11 +16,12 @@ def add(request):
     u = User()
     u.check_user(open_id)
     m = Memo()
-    m.add(open_id, word)
-    return JsonResponse({'res':'成功加入生词库'})
+    res = m.add(open_id, word)
+    return JsonResponse({'res': res})
+
 
 # 获得已有Memo
-def find (request):
+def find(request):
     if request.method == 'POST':
         open_id = json.loads(request.body.decode('utf-8'))['open_id']
         m = Memo()

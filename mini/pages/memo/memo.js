@@ -32,6 +32,14 @@ Page({
     })
   },
 
+  toSearch(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/result/result?word=' + e.target.dataset.word
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

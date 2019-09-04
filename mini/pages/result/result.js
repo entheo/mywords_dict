@@ -13,9 +13,20 @@ Page({
   },
 
 toSearch(e){
-    this.getTrans(e.detail.value.word)
     console.log(e)
+    this.getTrans(e.detail.value.word)    
 } , 
+
+toConfirmSearch(e){
+    this.getTrans(e.detail.value)
+},
+
+toClear(e){
+  this.setData({
+    word:'',
+    focus:true
+  })
+},
 
 //查询单词
   getTrans: function (word) {
@@ -42,7 +53,6 @@ toSearch(e){
 addMemo:function(word){
   console.log(word)
   console.log('openid',wx.getStorageSync('open_id'))
-
   wx.request({
     url: app.globalData.host + '/memo/add',
     method: 'POST',
@@ -52,6 +62,15 @@ addMemo:function(word){
     },
     success(res) {
       console.log(res.data)
+      if (res.data.res) {
+        wx.showToast({
+          title: '添加至生词本',
+        })}
+      else{
+        wx.showToast({
+          title: '生词本中已有',
+        })
+        }
     }
   })
 },

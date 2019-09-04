@@ -15,28 +15,13 @@
 <!--搜索框-->
 <view class='search-bar'>
   <form bindsubmit='toSearch'>
-    
-      <input name='word' placeholder='输入查询的英文单词'></input>
-     
-      <button form-type='submit'>
-      <view class='search-btn'></view>
-      <view>查找</view></button> 
-    
+    <view class='input-area'>
+      <input name='word' placeholder='输入查询的英文单词' bindconfirm="toConfirmSearch"></input>
+      <icon type="search" size="20"></icon>
+    </view>
   </form>
 </view> 
 
-<!--搜索结果-->
-  <view class='trans'>
-    <view wx:for='{{res}}' >
-      <view>{{item}}</view>
-    </view>
-  </view>
-  
-
-  <view>
-  
-  </view>
-<!--添加-->
 
 
 </view>

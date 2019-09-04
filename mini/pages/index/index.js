@@ -30,6 +30,12 @@ Page({
     })
   },
 
+  toConfirmSearch(e){
+    wx.navigateTo({
+      url: '/pages/result/result?word='+e.detail.value,
+    })
+  },
+
   
   onLoad: function () {
     if (app.globalData.userInfo) {

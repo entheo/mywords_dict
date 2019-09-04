@@ -43,22 +43,41 @@ class Memo(Data):
         words = []
         self.col.insert_one({'open_id': openid, 'words':words})
 
-    def add(self,openid,word):
-        u = self.col.find_one({'open_id':openid})
-        print('被添加用户:', u)
-        if u['words']:
-            new_words = u['words']
-            if word not in new_words:
-                new_words.append(word)
-        else:
-            new_words = []
+    def add(self, openid, word):
+        # 检查生词是否已存在, 如果没有添加，否则返回已存在状态
+        already_has_word = self.check_word(word, openid)
+        if not already_has_word:
+            new_words = self.find(openid)['words']
             new_words.append(word)
-        self.col.update_one({'open_id':openid}, {'$set': {'words': new_words}})
-        return True
+            self.col.update_one({'open_id': openid}, {'$set': {'words': new_words}})
+            return True
 
-    def find(self,openid):
-        m = self.col.find_one({'open_id': openid})
-        return m
+        else:
+            return False
+
+    # 查找对应用户的生词本
+    def find(self, openid):
+        try:
+            memo = self.col.find_one({'open_id': openid})
+        except LookupError:
+            print('用户的生词本不存在')
+            return False
+        else:
+            return memo
+
+    # 检查单词是否已存在
+    def check_word(self, word, openid):
+        m = self.find(openid)
+        if word in m['words']:
+            return True
+        else:
+            return False
+
+
+
+
+
+
 
 
 
