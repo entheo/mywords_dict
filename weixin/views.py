@@ -35,9 +35,10 @@ def login(request):
         print('获取code：', code)
         wx = wx_login(code)
         u = User()
-        u.create(wx['open_id'])
-        m = Memo()
-        m.create(wx['open_id'])
+        if not u.is_user(wx['open_id']):
+            u.create(wx['open_id'])
+            m = Memo()
+            m.create(wx['open_id'])
         res['open_id'] = wx['open_id']
     return JsonResponse(res)
 
