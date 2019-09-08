@@ -16,14 +16,26 @@
 
 
 
-<!--展示查询结果-->
+
 <view class='results-panel'>
+  <view class='left-content'>
+  <!--音标-->
+  <view class="pronounce">
+    <audio id='pronunciation' src="http://media.shanbay.com/audio/{{accent}}/{{word}}.mp3"></audio>
+    <view class="phonetic">英{{pron_uk}}
+      <view class="audio" bindtap="audioPlay" data-accent="uk"></view> 
+    </view>
+    <view class="phonetic">美{{pron_us}}
+      <view class="audio" bindtap="audioPlay" data-accent="us"></view>
+    </view>
+  </view>
+  <!--展示查询结果-->
   <view class='results' >
     <block wx:for='{{trans}}' wx:key='id'>
       <view class='trans-line'>{{item}}</view>
     </block>
   </view>
-
+</view>
 <!--加入生词本-->
     <view class='add-memo-icon' data-word='{{word}}' bindtap='toAddMemo'></view>
     <!-->

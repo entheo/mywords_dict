@@ -28,6 +28,15 @@ toClear(e){
   })
 },
 
+  audioPlay: function (e) {
+    this.setData({
+      accent:e.target.dataset.accent
+    })
+    console.log(this.data.accent)
+    this.audioCtx.play()
+  },
+
+
 //查询单词
   getTrans: function (word) {
     console.log(word)
@@ -41,7 +50,9 @@ toClear(e){
       success(res) {
         console.log(res.data)
         that.setData({
-          trans: res.data.res,
+          trans: res.data.res.trans,
+          pron_us:res.data.res.pronounce.us,
+          pron_uk:res.data.res.pronounce.uk,
           word_memo:word,
           word:word
         })
@@ -105,6 +116,7 @@ toMemo:function(){
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.audioCtx = wx.createAudioContext('pronunciation')
 
   },
 
