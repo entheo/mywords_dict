@@ -31,10 +31,13 @@ class YouDao():
         p_list = self.get_soup(word).find_all('span',class_='pronounce')
         if p_list:
             if len(p_list) == 1:
-                res['us'] = p_list[0].find('span').string
+                if p_list[0].find('span'):
+                    res['us'] = p_list[0].find('span').string
             else:
-                res['uk'] = p_list[0].find('span').string
-                res['us'] = p_list[1].find('span').string
+                if p_list[0].find('span'):
+                    res['uk'] = p_list[0].find('span').string
+                elif p_list[1].find('span'):
+                    res['us'] = p_list[1].find('span').string
             return res
         else:
             return False
