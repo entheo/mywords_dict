@@ -1,0 +1,67 @@
+
+<!--测试模板-->
+<template name='test'>
+   <view class='card card-test' bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <!--单词-->
+    <view class='word word-test'>{{memo_dict[i]['word']}}</view>
+    <!--音标与发音-->
+    <view class="pronounce pronounce-test">
+      <audio id='pronunciation' src="http://media.shanbay.com/audio/{{accent}}/{{memo_dict[i]['word']}}.mp3"></audio>
+      <view class="phonetic">英
+        <view class="audio" bindtap="audioPlay" data-accent="uk"></view> 
+      </view>
+      <view class="phonetic">美
+        <view class="audio" bindtap="audioPlay" data-accent="us"></view>
+      </view>
+    </view>
+     <!--位置-->
+    <view class='index index-trans'>{{i+1}}/{{length}}</view>
+  </view>
+</template>
+
+<!--翻译模板-->
+<template name='trans'>
+  <view class='card card-trans' bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <!--单词-->
+    <view class='word word-trans'>{{memo_dict[i]['word']}}</view>
+  
+    <!--展示翻译-->
+    <view class='results' >
+      <block wx:for="{{memo_dict[i]['trans']}}" wx:key='id'>
+        <view class='trans-line'>{{item}}</view>
+      </block>
+    </view>
+
+    <view class="p-line">
+      <view></view>
+      <view></view>
+    </view>
+    
+     <!--音标与发音-->
+    <view class="pronounce pronounce-trans">
+      <audio id='pronunciation' src="http://media.shanbay.com/audio/{{accent}}/{{memo_dict[i]['word']}}.mp3"></audio>
+      <view class="phonetic">英{{memo_dict[i]['pronounce']['uk']}}
+        <view class="audio" bindtap="audioPlay" data-accent="uk"></view> 
+      </view>
+      <view class="phonetic">美{{memo_dict[i]['pronounce']['us']}}
+        <view class="audio" bindtap="audioPlay" data-accent="us"></view>
+      </view>
+    </view>
+
+    <!--位置-->
+    <view class='index index-trans'>{{i}}/{{length}}</view>
+
+  </view>
+</template>
+
+
+<!--根据用户手势选择显示模板-->
+<view class='card-list'>
+  <template is='{{template}}' data='{{memo_dict,i,accent,length}}' />
+</view>
+
+<!--操作说明-->
+<view class='tips'>
+  左右滑动更换卡片，上下滑动查看解释
+</view>
+

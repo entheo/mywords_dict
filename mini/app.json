@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/result/result",
-    "pages/memo/memo"
+    "pages/memo/memo",
+    "pages/cards/cards",
+    "pages/word-list/word-list"
   ],
   "window": {
     "backgroundTextStyle": "light",

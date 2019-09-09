@@ -1,4 +1,4 @@
-//const weui = '/miniprogram_npm/weui-miniprogram'
+ //const weui = '/miniprogram_npm/weui-miniprogram'
 
 App({
 
@@ -110,6 +110,7 @@ App({
 
   //全局变量
   globalData: {
+    memo_dict:'',
     userInfo: null,
     host:'http://10.0.0.4:8000',
     list: [{

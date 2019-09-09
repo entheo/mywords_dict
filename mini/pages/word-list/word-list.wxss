@@ -1,0 +1,11 @@
+/* pages/word-list/word-list.wxss */
+page{
+  background-color:white
+}
+
+.memo{
+  font-size: 1.3em;
+  text-align: center;
+  padding:10px;
+  line-height: 2.2;
+}

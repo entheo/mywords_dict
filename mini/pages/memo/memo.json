@@ -1,5 +1,6 @@
 {
   "window":{
-    "navigationBarTitleText": "生词本"
+    "navigationBarTitleText": "生词本",
+    "disableScroll": true
   }
 }

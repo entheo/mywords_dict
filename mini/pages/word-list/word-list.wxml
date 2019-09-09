@@ -1,0 +1,6 @@
+<!--pages/word-list/word-list.wxml-->
+<view class='memo'>
+<block wx:for='{{words}}' wx:key='id'>
+  <view class='line' bindtap="toSearch" data-word='{{item}}' >{{item}}</view>
+</block>
+</view>

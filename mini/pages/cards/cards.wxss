@@ -1,0 +1,102 @@
+/* pages/cards/cards.wxss */
+.card-list{
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center
+}
+
+.card{
+  text-align: center;
+  background-color:white;
+  height:400px;
+  width:70%;
+  border-radius: 10px
+ 
+}
+
+.card-test{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size:2rem;
+}
+
+.card-trans{
+ display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.word-test{
+  margin-top:50px
+}
+
+.word-trans{
+  font-size:1.5em;
+  margin-top:60px;
+
+}
+.pronounce-test{
+  justify-content: space-around;
+  margin-left: -50px;
+ 
+}
+
+.pronounce-trans{
+  font-size: 0.8em;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.results{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+width:80%;
+text-align:left;
+font-size: 0.9em
+}
+
+.trans-line{
+  margin-bottom:10px
+}
+
+.phonetic{
+  margin-bottom: 20px;
+}
+
+.tips{
+  text-align: center;
+  font-size: 0.8em;
+  color: gray;
+}
+
+
+.p-line{
+  position:relative;
+  width:418rpx;
+
+  border-top:4rpx dashed lightgray
+}
+.p-line view{
+  width:28rpx;
+  height:28rpx;
+  background:#fff;
+  border-radius:50%;
+  position:absolute;
+  z-index:99;
+  top:-14rpx;
+}
+.p-line :first-child{
+  left:-28rpx;
+}
+.p-line :last-child{
+  right:-28rpx;
+}
+
+.index{
+  font-size: 15px;
+  color:gray
+}

@@ -3,6 +3,7 @@
 page{
    background-color: #f1e7e7;
 }
+
 .container {
   height: 100%;
   display: flex;
@@ -12,3 +13,27 @@ page{
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.pronounce{
+  display: flex;
+  align-items: center;
+  font-size:0.9rem;
+  padding: 10px;
+  justify-content: space-around;
+
+}
+
+.phonetic{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 10px
+}
+
+.audio{
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHBhdGggZD0iTTE5MiA3NjhDODUuOTUyIDc2OCAwIDY4MS45ODQgMCA1NzZWNDQ4YTE5MiAxOTIgMCAwIDEgMTkyLTE5Mmg2NEw1NzYgMHYxMDI0TDI1NiA3NjhoLTY0em0yNTYgMFYyNTZMMzIwIDM4NEgxOTJhNjQgNjQgMCAwIDAtNjQgNjR2MTI4YzAgMzUuMzkyIDI4LjYwOCA2NCA2NCA2NGgxMjhsMTI4IDEyOHptMzg0LTI1NmMwIDExOS4xMDQtODEuNzI4IDIxOC4zNjgtMTkyIDI0Ni45MTJ2LTEzNi42NGMzOC4xNDQtMjIuMjA4IDY0LTYzLjA0IDY0LTExMC4yNzJzLTI1Ljg1Ni04OC4wNjQtNjQtMTEwLjI3MnYtMTM2LjY0Qzc1MC4yNzIgMjkzLjU2OCA4MzIgMzkyLjgzMiA4MzIgNTEyeiIgZmlsbD0iIzFhZmEyOSIvPjwvc3ZnPg==');
+  background-size: cover;
+  width:38rpx;
+  height:38rpx;
+  margin-left:5px 
+}

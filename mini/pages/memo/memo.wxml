@@ -1,7 +1,34 @@
 <!--pages/memo/memo.wxml-->
-<view class='memo'>
-<block wx:for='{{words}}' wx:key='id'>
-  <view class='line' bindtap="toSearch" data-word='{{item}}'>{{item}}</view>
-</block>
+
+<template name = 'blank'>
+<view class="word-list" bindtap='toWordList'>
+还没有生词，快去词典中搜索并添加吧
 </view>
+</template>
+
+
+<template name='active'>
+<view class="word-list" bindtap='toWordList'>
+目前累积生词{{num}}个
+</view>
+</template>
+
+
+<template is='{{template}}' data='{{num}}'/>
+
+<!--记忆工具-->
+<view class='toolbox'>
+  <!--记忆卡片-->
+  <view class="tool" bindtap="toCards">
+    <view class='title'>记忆卡片</view>
+    <view class='tips'>随时随地，利用碎片时间记忆单词</view>
+  </view>
+</view>
+
+
+
+
+
+
+
 

@@ -82,6 +82,27 @@ class Memo(Data):
             return False
 
 
+class Dict(Data):
+    def __init__(self):
+        super(Dict, self).__init__()
+        self.col = self.db['dict']
+
+    # trans 为list类型
+    def create(self, word, trans, pronounce):
+        if not self.find_word(word):
+            self.col.insert_one({'word':word, 'trans':trans, 'pronounce':pronounce, 'created_at':now()})
+            return True
+
+    # 查询单词是否存在
+    def find_word(self,word):
+        if self.col.find_one({'word':word}):
+            return True
+        else:
+            return False
+
+
+
+
 
 
 

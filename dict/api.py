@@ -36,16 +36,14 @@ class YouDao():
         else:
             return False
 
+    # 返回音标与翻译
+    def get_trans_pronounce(self,word):
+        res = {}
+        res['word'] = word
+        res['trans'] = self.get_trans(word)
+        res['pronounce'] = self.get_pronounce(word)
+        return res
 
-def get_trans(word):
-    trans = []
-    url = 'http://dict.youdao.com/w/eng/'+word+'/#keyfrom=dict2.index'
-    res = requests.get(url)
-    soup = BeautifulSoup(res.content,'html.parser')
-    t_list = soup.find('div',class_='trans-container').find('ul')
-    for i in t_list:
-        if i != '\n':
-            trans.append(i.string)
-    return trans
+
 
 
