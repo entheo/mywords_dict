@@ -1,14 +1,30 @@
 from . import api
 from django.http import JsonResponse
 
-
-dict = api.YouDao()
+d = api.YouDao()
 res = {}
+
+
+# 辨别是否含有中文
+def is_chinesee(uchar):
+    if '\u4e00' <= uchar <= '\u9fff':
+        return True
+    else:
+        return False
+
+
+def get_trans(word):
+    res = {}
+    if is_chinesee(word):
+        res['trans'] = d.ch_trans(word)
+        res['language'] = 'ch'
+    else:
+        res['trans'] = d.get_trans(word)
+        res['pronounce'] = d.get_pronounce(word)
+        res['language'] = 'en'
+    return res
 
 
 def trans(request):
     if request.method == 'GET':
-        word = request.GET['word']
-        res['trans'] = dict.get_trans(word)
-        res['pronounce'] = dict.get_pronounce(word)
-        return JsonResponse({'res':res})
+        return JsonResponse({'res': get_trans(request.GET['word'])})

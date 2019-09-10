@@ -13,7 +13,7 @@ class YouDao():
         return soup
 
 
-    # 抓取单词解释
+    # 抓取英文单词解释
     def get_trans(self, word):
         trans = []
         t_list = self.get_soup(word).find('div',class_='trans-container').find('ul')
@@ -50,6 +50,14 @@ class YouDao():
         res['pronounce'] = self.get_pronounce(word)
         return res
 
-
-
-
+    # 抓取中文结果
+    def ch_trans(self,word):
+        res = []
+        container_items = self.get_soup(word).find('div', id='phrsListTab').find_all('div', class_='trans-container')
+        if container_items:
+            for c in container_items:
+                items = c.find_all('span', class_='contentTitle')
+                if items:
+                    for i in items:
+                        res.append(i.find('a').string)
+        return res
