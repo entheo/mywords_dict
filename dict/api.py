@@ -36,8 +36,8 @@ class YouDao():
             else:
                 if p_list[0].find('span'):
                     res['uk'] = p_list[0].find('span').string
-                elif p_list[1].find('span'):
-                    res['us'] = p_list[1].find('span').string
+                    if p_list[1].find('span'):
+                        res['us'] = p_list[1].find('span').string
             return res
         else:
             return False
