@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.1",
+	"libVersion": "2.8.3",
 	"appid": "wxf5968a2e5202ed42",
 	"projectname": "mywords_dict",
 	"debugOptions": {

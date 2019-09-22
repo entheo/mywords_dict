@@ -9,7 +9,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list:app.globalData.list
+    list:app.globalData.list,
+    placeholder: '输入所查英文单词或中文',
   },
   
   tabChange(e){
@@ -66,6 +67,7 @@ Page({
       })
     }
   },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -73,5 +75,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onShow: function () {
+    this.setData({
+      word:''
+    })
   }
 })
+
+

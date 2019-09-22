@@ -61,3 +61,29 @@ class YouDao():
                     for i in items:
                         res.append(i.find('a').string)
         return res
+
+# www.dict.cn
+class DictCn():
+    def __init__(self):
+        self.url = 'http://www.dict.cn/'
+
+    def get_soup(self, word):
+        res = requests.get(self.url+word)
+        soup = BeautifulSoup(res.content, 'html.parser')
+        return soup
+
+    # 抓取例句
+    def get_sentences(self, word):
+        s_list = []
+        soup = self.get_soup(word)
+        s_html = soup.find('div', class_='layout sort').find_all('ol')
+        i = 0
+        while i < len(s_html):
+            for s in s_html[i].find_all('li'):
+                c = s.contents
+                c.pop(1)
+                s_list.append(c)
+            i += 1
+        return s_list
+
+

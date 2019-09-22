@@ -1,11 +1,16 @@
 /**index.wxss**/
 
+.container{
+  justify-content: flex-start
+}
+
 .input-area{
   display: flex;
   align-items: center;
   background-color: white;
   height: 50px;
-  width: 310px;
+  width: 330px;
+  border-radius: 8px;
 }
 
 .userinfo {
@@ -32,7 +37,7 @@
 
 input{
 height:50px;
-width:270px;
+width:85%;
 text-align:center;
 font-size: 1.1em
 }
@@ -53,10 +58,16 @@ background-color:#1b9e1b;
 }
 
 .search-btn{
-  background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHBhdGggZD0iTTQ2NCAxMjhjLTE4NS42IDAtMzM2IDE1MC40LTMzNiAzMzZzMTUwLjQgMzM2IDMzNiAzMzZjOTIuOCAwIDE3Ni42NC0zNy40NCAyMzcuNDQtOTguMjRDNzYyLjI0IDY0MC45NiA4MDAgNTU2LjggODAwIDQ2NGMwLTE4NS42LTE1MC40LTMzNi0zMzYtMzM2ek02NCA0NjRDNjQgMjQzLjIgMjQzLjIgNjQgNDY0IDY0czQwMCAxNzkuMiA0MDAgNDAwYzAgOTguODgtMzUuODQgMTg5Ljc2LTk1LjY4IDI1OS41Mkw5NTAuNCA5MDUuMjhhMzEuODcyIDMxLjg3MiAwIDEgMS00NS4xMiA0NS4xMmwtMTgyLjQtMTgxLjc2QzY1My40NCA4MjguMTYgNTYyLjg4IDg2NCA0NjQgODY0IDI0My4yIDg2NCA2NCA2ODQuOCA2NCA0NjR6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
-  background-size: cover;
-  height:20px;
-  width:20px
+  margin-top: 0;
+  height: 100%;
+  width:15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-colo:;
+  border-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 

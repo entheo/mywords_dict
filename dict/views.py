@@ -2,6 +2,7 @@ from . import api
 from django.http import JsonResponse
 
 d = api.YouDao()
+c = api.DictCn()
 res = {}
 
 
@@ -22,6 +23,7 @@ def get_trans(word):
         res['trans'] = d.get_trans(word)
         res['pronounce'] = d.get_pronounce(word)
         res['language'] = 'en'
+        res['sentences'] = c.get_sentences(word)
     return res
 
 

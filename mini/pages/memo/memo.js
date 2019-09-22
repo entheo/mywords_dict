@@ -79,7 +79,9 @@ Page({
     }
     else{
       wx.showToast({
-        title: '请先添加单词'
+        title: '请从字典查询中添加单词',
+        icon:'none',
+        duration:2000
       })
     }
 

@@ -8,14 +8,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    word_memo:''
-
+    word_memo:'',
   },
 
 toSearch(e){
     console.log(e)
     this.getTrans(e.detail.value.word)    
 } , 
+
+checkToSearch(e){
+  if(this.data.en==null){
+    wx.navigateTo({
+      url: '/pages/result/result?word='+e.target.dataset.word,
+    })
+  }
+},
 
 toConfirmSearch(e){
     this.getTrans(e.detail.value)
@@ -48,15 +55,24 @@ toClear(e){
         word: word
       },
       success(res) {
-        console.log(res.data)
+        console.log(res.data.res)
         that.setData({
           trans: res.data.res.trans,
-          pron_us:res.data.res.pronounce.us,
-          pron_uk:res.data.res.pronounce.uk,
-          word_memo:word,
-          word:word
+          sentences:res.data.res.sentences,
+          word: word,
+          en:null,
+          link:'link',
+          show:true
         })
-        console.log(res.data.res)
+        if(res.data.res.language=='en'){
+          that.setData({
+            pron_us: res.data.res.pronounce.us,
+            pron_uk: res.data.res.pronounce.uk,
+            word_memo: word,
+            en:true,
+            link:''
+          })
+        } 
       }
     })
   },
@@ -104,8 +120,11 @@ toMemo:function(){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let windowHeight = wx.getSystemInfoSync().windowHeight 
+    console.log(windowHeight)
     this.setData({
       word:options.word,
+      scroll_height:windowHeight-101
     })
     this.getTrans(options.word)
   },

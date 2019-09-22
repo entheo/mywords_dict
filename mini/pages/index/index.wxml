@@ -16,8 +16,8 @@
 <view class='search-bar'>
   <form bindsubmit='toSearch'>
     <view class='input-area'>
-      <input name='word' placeholder='输入查询的英文单词' bindconfirm="toConfirmSearch"></input>
-      <icon type="search" size="20"></icon>
+      <input name='word' placeholder='{{placeholder}}' value='{{word}}' bindconfirm="toConfirmSearch"></input>
+      <button class='search-btn' form-type="submit"><icon type="search" color='white' size="20" bindtap=""></icon></button>
     </view>
   </form>
 </view> 

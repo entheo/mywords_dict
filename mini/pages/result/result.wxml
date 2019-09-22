@@ -1,7 +1,6 @@
 <!--输入框-->
-
-<form bindsubmit='toSearch'>
 <view class='searchbar'>
+<form bindsubmit='toSearch'>
   <view class="input-area">
     <input name='word' value='{{word}}' bindconfirm="toConfirmSearch" focus='{{focus}}'></input>
     <icon type="clear" size="15" bindtap="toClear"></icon>
@@ -9,14 +8,16 @@
     <view id="clear" bindtap="toClear">  
     </view>-->
   </view>
-
-  </view>
 </form>
+</view>
+ß
 
-
-<view class='results-panel'>
-  <view class='left-content'>
-  <!--音标-->
+<scroll-view class='results-panel' scroll-y='true' enable-flex='true' style="height:{{scroll_height}}px">
+  <!--单词与音标-->
+  <view wx:if='{{en}}' class='content-block'>
+    <view class='word'>
+      {{word}}
+    </view>
   <view class="pronounce">
     <audio id='pronunciation' src="http://media.shanbay.com/audio/{{accent}}/{{word}}.mp3"></audio>
     <view class="phonetic">英{{pron_uk}}
@@ -26,24 +27,32 @@
       <view class="audio" bindtap="audioPlay" data-accent="us"></view>
     </view>
   </view>
+  </view>
+
   <!--展示查询结果-->
-  <view class='results' >
+  <view class='results content-block ' >
     <block wx:for='{{trans}}' wx:key='id'>
-      <view class='trans-line'>{{item}}</view>
+      <view class='trans-line {{link}}' bindtap="checkToSearch" data-word="{{item}}">{{item}}</view>
     </block>
   </view>
+
+
+<!--展示例句-->
+<view class='sentences content-block'>
+  <view class='trans-line' wx:for='{{sentences}}' wx:key='id' wx:for-item='sentence'>
+      <block class='sentence' wx:for='{{sentence}}'>
+        <view class='line'>{{item}}</view>
+      </block>
+  </view>
 </view>
+
+</scroll-view>
+
+
 <!--加入生词本-->
-    <view class='add-memo-icon' data-word='{{word}}' bindtap='toAddMemo'></view>
-    <!-->
-  <view class='add-memo-btn'>
-      <form bindsubmit='toAddMemo' data-word='{{word}}'>
-      <button class='add-memo-btn' form-type='submit'>
-        <view class='add-memo-icon'></view>
-      </button>
-      </form>
-  
-  </view>-->
+<view wx:if='{{show}}' class='add-memo' data-word='{{word}}' bindtap="toAddMemo">
+  <view >加入生词本</view>
+  <view class='add-memo-icon' data-word='{{word}}' bindtap='toAddMemo'></view> 
 </view>
 
 
