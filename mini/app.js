@@ -79,14 +79,6 @@ App({
       this.signUp(function(){
         resolv('got user')
       })
-      //if (wx.getStorageSync('open_id') == '') {
-        //this.signUp(function () {
-          //resolv('signed up successfully')
-        //})
-      //}
-      //else {
-        //resolv('Has already signed up')
-      //}
     })
     return promise
   },

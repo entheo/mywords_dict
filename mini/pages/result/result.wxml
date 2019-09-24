@@ -31,6 +31,7 @@
 
   <!--展示查询结果-->
   <view class='results content-block ' >
+    <view class='title'>释义</view>
     <block wx:for='{{trans}}' wx:key='id'>
       <view class='trans-line {{link}}' bindtap="checkToSearch" data-word="{{item}}">{{item}}</view>
     </block>
@@ -39,6 +40,7 @@
 
 <!--展示例句-->
 <view class='sentences content-block'>
+<view class='title'>例句</view>
   <view class='trans-line' wx:for='{{sentences}}' wx:key='id' wx:for-item='sentence'>
       <block class='sentence' wx:for='{{sentence}}'>
         <view class='line'>{{item}}</view>

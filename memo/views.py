@@ -34,7 +34,10 @@ def find(request):
         open_id = json.loads(request.body.decode('utf-8'))['open_id']
         m = Memo()
         memo = m.find(open_id)
-        return JsonResponse({'words': memo['words']})
+        if memo:
+            return JsonResponse({'words': memo['words']})
+        else:
+            return False
 
 
 # 获取一个用户的生词字典
@@ -45,11 +48,25 @@ def get_memo_dict(request):
         m = Memo()
         d = Dict()
         memo = m.find(open_id)
+        print(memo, memo['words'], open_id)
         if memo and memo['words']:
             for w in memo['words']:
                 word = d.col.find_one({'word': w}, {'word': 1, 'trans': 1, 'pronounce': 1, '_id':0})
                 res.append(word)
             return JsonResponse({'dict': res})
         else:
-            return False
+            return JsonResponse({'dict': []})
 
+
+# 从一个用户的memo中删除对应单词
+def delete_memo_word(request):
+    if request.method == 'POST':
+        open_id = json.loads(request.body.decode('utf-8'))['open_id']
+        word = json.loads(request.body.decode('utf-8'))['word']
+        print(word)
+        m = Memo()
+        if m.find(open_id):
+            m.delete_word(word, open_id)
+            return JsonResponse({'res': True})
+        else:
+            return JsonResponse({'res': False})

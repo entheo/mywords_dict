@@ -5,5 +5,6 @@ urlpatterns = {
     path('create', views.create, name='create'),
     path('add', views.add, name='add'),
     path('find', views.find, name='find'),
-    path('get_memo_dict', views.get_memo_dict, name='get_memo_dict')
+    path('get_memo_dict', views.get_memo_dict, name='get_memo_dict'),
+    path('delete_memo_word', views.delete_memo_word)
 }

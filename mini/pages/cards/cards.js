@@ -1,5 +1,7 @@
 // pages/cards/cards.js
 const app = getApp()
+var memo = require('../../utils/memo.js')
+
 Page({
 
   /**
@@ -18,6 +20,32 @@ Page({
     })
     console.log(this.data.accent)
     this.audioCtx.play()
+  },
+
+//从生词本中删除对应单词
+  deleteMemoWord(e){
+    var w = e.currentTarget.dataset.word
+    var that = this
+    wx.request({
+      url: app.globalData.host+'/memo/delete_memo_word',
+      method:'POST',
+      data:{
+        word:w,
+        open_id:wx.getStorageSync('open_id')
+      },
+      success(res){
+        console.log(res.data.res)
+        memo.getMemoDict(wx.getStorageSync('open_id'),that).then(res=>{
+          
+          console.log(that.data.length)
+          if (that.data.length == 0) {
+            that.setData({
+              template: 'empty'
+            })
+          }
+        })       
+      }
+    })
   },
 
   touchStart(e) {
@@ -40,9 +68,15 @@ Page({
       console.log('右滑',x)
       var index = this.data.i-1
       console.log(index)
-      if(this.data.i>0){
+      if(index>=0){
         this.setData({
           i:index
+        })
+      }
+      else {
+        console.log(index)
+        this.setData({
+          i:this.data.length+index
         })
       }
     }
@@ -50,10 +84,18 @@ Page({
     else if (x < -50) {
       console.log('左滑',x)
       var index = this.data.i + 1
+      console.log(index)
       if (index<this.data.length) {
         this.setData({
           i: index
         })}
+      else if (index == this.data.length){
+        this.setData({
+          i:0
+        })
+      }
+      
+      
     }
     // 上滑查看翻译
     else if(y < -40){
@@ -77,7 +119,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   this.setData({
+    console.log(app.globalData.memo_dict)
+    this.setData({
      memo_dict:JSON.parse(app.globalData.memo_dict),
      length:JSON.parse(app.globalData.memo_dict).length
    })
@@ -94,6 +137,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if(this.data.length==0){
+      this.setData({
+        template:'empty'
+      })
+    }
 
   },
 

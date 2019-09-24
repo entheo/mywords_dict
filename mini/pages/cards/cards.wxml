@@ -1,7 +1,19 @@
+<!--空内容模板-->
+<template name='empty'>
+  <view class='card card-empty'>
+      <view class="tips">
+      空空的生词本 ...
+      </view>
+  </view>
+</template>
 
 <!--测试模板-->
 <template name='test'>
    <view class='card card-test' bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <!--删除按钮-->
+    <view class='delete' bindtap="deleteMemoWord" data-word="{{memo_dict[i]['word']}}">
+      <icon type="clear" size="20"/>
+    </view>
     <!--单词-->
     <view class='word word-test'>{{memo_dict[i]['word']}}</view>
     <!--音标与发音-->

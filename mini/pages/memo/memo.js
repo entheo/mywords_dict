@@ -1,6 +1,7 @@
 // pages/memo/memo.js
 const app = getApp()
 var start_x,start_y
+var memo = require('../../utils/memo.js')
 Page({
 
   /**
@@ -50,9 +51,9 @@ Page({
       success(res) {
         console.log(res)
         app.globalData.memo_dict = JSON.stringify(res.data.dict)
-        that.setData({
+        /*that.setData({
           dict: res.data.dict
-        })
+        })*/
       }
     })
   },
@@ -93,10 +94,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.getToken().then(res=>{
-      this.getMemoList(wx.getStorageSync('open_id'))
-      this.getMemoDict(wx.getStorageSync('open_id'))
-    })
+    console.log('load')
+    app.getToken()
   },
 
   /**
@@ -110,9 +109,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    app.getToken().then(res => {
+      var that = this
+      memo.getMemoDict(wx.getStorageSync('open_id'), that).then(res => {
+        that.setData({
+          dict: res.data.dict
+        })
+      })
       this.getMemoList(wx.getStorageSync('open_id'))
-    })
+
   },
 
   /**

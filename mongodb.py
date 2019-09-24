@@ -65,19 +65,43 @@ class Memo(Data):
 
     # 查找对应用户的生词本
     def find(self, openid):
-        try:
-            memo = self.col.find_one({'open_id': openid})
-        except LookupError:
-            print('用户的生词本不存在')
-            return False
-        else:
+        memo = self.col.find_one({'open_id': openid})
+        if memo:
             return memo
+        else:
+            words = []
+            self.col.insert_one({'open_id': openid, 'words': words, 'created_at': now()})
+            print('新建完成')
+            memo = self.col.find_one({'open_id': openid})
+            return memo
+
 
     # 检查单词是否已存在
     def check_word(self, word, openid):
         m = self.find(openid)
         if word in m['words']:
             return True
+        else:
+            return False
+
+    #获取生词列表
+    def get_memo_words(self, openid):
+        m = self.find(openid)
+        words = m['words']
+        return words
+
+    # 删除对应单词
+    def delete_word(self, word, openid):
+        words = self.get_memo_words(openid)
+        print('memo为：', words)
+        if word in words:
+            words.remove(word)
+            if not words:
+                words = []
+            my_query = {'open_id': openid}
+            new_value = {'$set': {'words': words}}
+            new_m = self.col.update_one(my_query, new_value)
+            return new_m
         else:
             return False
 

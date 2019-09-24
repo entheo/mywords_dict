@@ -30,7 +30,7 @@ justify-content: space-around;
 }
 
 .word-test{
-  margin-top:50px
+  
 }
 
 .word-trans{
@@ -99,4 +99,18 @@ font-size: 0.9em
 .index{
   font-size: 15px;
   color:gray
+}
+
+.delete{
+  margin-left: 220px;
+  margin-top:-38px;
+  width:50px
+}
+
+.card-empty{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+font-size: 1.2em;
+
 }

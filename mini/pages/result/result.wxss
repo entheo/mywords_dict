@@ -35,10 +35,6 @@ input{
 }
 
 .results-panel{
-
-  display:flex;
-  justify-content:space-between;
-  flex-direction: column;
   position: fixed;
   z-index: -1;
   top:52px;
@@ -103,4 +99,8 @@ form{
   font-size:2em;
   font-weight: bold;
   color:#1aad19
+}
+
+.title{
+  font-weight: bold
 }
