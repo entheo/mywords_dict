@@ -44,6 +44,10 @@ justify-content: space-around;
  
 }
 
+.pronounce{
+  padding:0;
+  margin-top:10px
+}
 .pronounce-trans{
   font-size: 0.8em;
 flex-direction: column;
@@ -56,7 +60,9 @@ flex-direction: column;
 align-items: flex-start;
 width:80%;
 text-align:left;
-font-size: 0.9em
+font-size: 0.9em;
+height:150px;
+justify-content: center
 }
 
 .trans-line{
@@ -64,7 +70,8 @@ font-size: 0.9em
 }
 
 .phonetic{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-right:-6px;
 }
 
 .tips{
@@ -97,8 +104,8 @@ font-size: 0.9em
 }
 
 .index{
-  font-size: 15px;
-  color:gray
+  font-size: 12px;
+  color:gray;
 }
 
 .delete{
@@ -113,4 +120,11 @@ flex-direction: column;
 justify-content: center;
 font-size: 1.2em;
 
+}
+
+.more{
+  font-size:0.9em;
+  color:blue;
+  width:80%;
+  text-align: left
 }

@@ -38,10 +38,15 @@
     <view class='word word-trans'>{{memo_dict[i]['word']}}</view>
   
     <!--展示翻译-->
-    <view class='results' >
+    <view class='results'>
       <block wx:for="{{memo_dict[i]['trans']}}" wx:key='id'>
         <view class='trans-line'>{{item}}</view>
       </block>
+    </view>
+
+     <!--更多-->
+    <view class='more' bindtap="getMore" data-word="{{memo_dict[i]['word']}}">
+    更多释义与例句 ...
     </view>
 
     <view class="p-line">
@@ -59,6 +64,7 @@
         <view class="audio" bindtap="audioPlay" data-accent="us"></view>
       </view>
     </view>
+    
 
     <!--位置-->
     <view class='index index-trans'>{{i}}/{{length}}</view>

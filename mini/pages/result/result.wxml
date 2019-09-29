@@ -10,9 +10,9 @@
   </view>
 </form>
 </view>
-ß
 
-<scroll-view class='results-panel' scroll-y='true' enable-flex='true' style="height:{{scroll_height}}px">
+
+<scroll-view class='results-panel' scroll-y enable-flex style="height:{{scroll_height}}px">
   <!--单词与音标-->
   <view wx:if='{{en}}' class='content-block'>
     <view class='word'>
