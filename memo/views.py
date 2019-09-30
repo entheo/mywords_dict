@@ -57,7 +57,7 @@ def get_memo_dict(request):
                 trans = word['trans']
                 trans.sort(key=lambda i: len(i))
                 if len(trans) > 2:
-                    word['trans'] = trans[0:2]
+                    word['trans'] = trans[0:1]
 
                 res.append(word)
             return JsonResponse({'dict': res})
