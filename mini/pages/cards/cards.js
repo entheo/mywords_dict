@@ -35,14 +35,18 @@ Page({
       },
       success(res){
         console.log(res.data.res)
-        memo.getMemoDict(wx.getStorageSync('open_id'),that).then(res=>{
-          
-          console.log(that.data.length)
-          if (that.data.length == 0) {
+        memo.getMemoDict(wx.getStorageSync('open_id'),that).then(res=>{      
+          if(that.data.length == 0){
             that.setData({
-              template: 'empty'
+            template: 'empty'
             })
-          }
+          } 
+          else if(that.data.length == that.data.i){
+            console.log('jajja')
+            that.setData({
+              i:0
+            })
+          }     
         })       
       }
     })

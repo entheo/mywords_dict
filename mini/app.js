@@ -104,10 +104,10 @@ App({
   globalData: {
     memo_dict:'',
     userInfo: null,
-    host:'http://172.20.10.4:8000',
+    host:'https://www.wetouch.club:8000',
     list: [{
         text: "词典",
-        pagePath:"../index/index",
+        pagePath:"../index/index",  
         iconPath: "images/dict.png",
         selectedIconPath: "images/dict_activated.png",
       },

@@ -53,10 +53,10 @@ def get_memo_dict(request):
             for w in memo['words']:
                 word = d.col.find_one({'word': w}, {'word': 1, 'trans': 1, 'pronounce': 1, '_id': 0})
 
-                # 将word的trans数量限制在三个以内
+                # 将word的trans数量限制在两个以内
                 trans = word['trans']
                 trans.sort(key=lambda i: len(i))
-                if len(trans) > 3:
+                if len(trans) > 2:
                     word['trans'] = trans[0:2]
 
                 res.append(word)
