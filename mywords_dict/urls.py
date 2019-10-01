@@ -20,7 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('dict/', include(('dict.urls', 'dict'), namespace='dict')),
     path('memo/', include(('memo.urls', 'memo'), namespace='memo')),
-    path('weixin/', include(('weixin.urls', 'weixin'), namespace='weixin'))
+    path('weixin/', include(('weixin.urls', 'weixin'), namespace='weixin')),
+    path('word_list/', include(('word_list.urls', 'word_list'), namespace='word_list'))
 
 ]
 

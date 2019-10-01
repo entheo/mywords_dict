@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dict',
     'memo',
-    'weixin'
+    'weixin',
+    'word_list'
 ]
 
 MIDDLEWARE = [

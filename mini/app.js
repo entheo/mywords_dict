@@ -104,7 +104,7 @@ App({
   globalData: {
     memo_dict:'',
     userInfo: null,
-    host:'https://www.wetouch.club:8000',
+    host:'http://10.0.0.4:8000',
     list: [{
         text: "词典",
         pagePath:"../index/index",  

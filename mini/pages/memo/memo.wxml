@@ -1,5 +1,6 @@
 <!--pages/memo/memo.wxml-->
 
+<!--全部生词列表-->
 <template name = 'blank'>
 <view class="word-list" bindtap='toWordList'>
 还没有生词，快去词典中搜索并添加吧
@@ -13,8 +14,12 @@
 </view>
 </template>
 
-
 <template is='{{template}}' data='{{num}}'/>
+
+<!--雅思精选词汇-->
+  <view class="word-list" bindtap="toWordList" data-name='IELTS精选词汇'>
+    IELTS雅思精选词汇
+  </view>
 
 <!--记忆工具-->
 <view class='toolbox'>
@@ -24,6 +29,7 @@
     <view class='tips'>随时随地，利用碎片时间记忆单词</view>
   </view>
 </view>
+
 
 
 

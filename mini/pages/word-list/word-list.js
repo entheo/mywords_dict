@@ -1,4 +1,5 @@
 // pages/word-list/word-list.js
+var app = getApp()
 Page({
 
   /**
@@ -19,9 +20,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      words:JSON.parse(options.words)
-    })
+    if(options.words){
+      this.setData({
+        word_list: JSON.parse(options.words)
+      })
+    }
+    else if(options.name){
+      var that = this
+      wx.request({
+        url: app.globalData.host+'/word_list/get_word_list',
+        method:'POST',
+        data:{
+          name:options.name
+        },
+        success(res){
+          that.setData({
+            word_list: res.data.word_list
+          })
+        }
+      })
+    }
+   
   },
 
   /**

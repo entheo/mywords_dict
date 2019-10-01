@@ -67,9 +67,17 @@ Page({
   },
 
   toWordList(e){
-    wx.navigateTo({
-      url: '/pages/word-list/word-list?words='+JSON.stringify(this.data.words),
-    })
+    console.log(e)
+    if(e.currentTarget.dataset){
+      wx.navigateTo({
+        url: '/pages/word-list/word-list?name='+e.currentTarget.dataset.name,
+      })
+    }
+    else{
+      wx.navigateTo({
+        url: '/pages/word-list/word-list?words=' + JSON.stringify(this.data.words),
+      })
+    }
   },
 
   toCards(){

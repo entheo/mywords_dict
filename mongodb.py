@@ -119,13 +119,32 @@ class Dict(Data):
 
     # 查询单词是否存在
     def find_word(self,word):
-        if self.col.find_one({'word':word}):
+        if self.col.find_one({'word': word}):
             return True
         else:
             return False
 
 
+# 词库
+class WordList(Data):
+    def __init__(self):
+        super(WordList, self).__init__()
+        self.col = self.db['word_list']
 
+    def find_name(self, name):
+        if self.col.find_one({'name': name}):
+            return True
+        else:
+            return False
+
+    def create(self, name, word_list):
+        if not self.find_name(name):
+            self.col.insert_one({'name': name, 'word_list': word_list, 'created_at': now()})
+            return True
+
+    def find(self, name):
+        res = self.col.find_one({'name': name})
+        return res
 
 
 
