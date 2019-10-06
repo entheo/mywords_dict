@@ -20,12 +20,19 @@ def add(request):
     res = m.add(open_id, word)
 
     # 备份trans
+    add_memo_dict(word)
+
+    return JsonResponse({'res': res})
+
+
+def add_memo_dict(word):
     dict_source = YouDao()
     info = dict_source.get_trans_pronounce(word)
     d = Dict()
-    d.create(word, info['trans'], info['pronounce'])
+    if not d.find_word(word):
+        d.create(word, info['trans'], info['pronounce'])
 
-    return JsonResponse({'res': res})
+
 
 
 # 获得已有Memo
