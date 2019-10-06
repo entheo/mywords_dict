@@ -7,11 +7,14 @@ def now():
 class Data():
     def __init__(self):
         # root登录mongodb
-        self.client = pymongo.MongoClient('mongodb://root:2810033@localhost:27017')
+        self.client = pymongo.MongoClient('mongodb://localhost:35015')
         self.db = self.client['mywords_dict']
 
         # entheo登录mywordict
-        self.client.mywords_dict.authenticate('entheo', '2810033')
+        #self.client.mywords_dict.authenticate('entheo', '2810033')
+        self.client.admin.authenticate('entheo', '25479gooddict')
+
+
 
 
 class User(Data):
