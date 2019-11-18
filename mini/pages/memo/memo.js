@@ -43,7 +43,7 @@ Page({
   getMemoDict: function (openid) {
     var that = this
     wx.request({
-      url: app.globalData.host + '/memo/get_memo_dict',
+      url: app.globalData.host + '/memo/get_user_memo_dict',
       method: 'POST',
       data: {
         open_id: openid
@@ -68,7 +68,7 @@ Page({
 
   toWordList(e){
     console.log(e)
-    if(e.currentTarget.dataset){
+    if(e.currentTarget.dataset.name){
       wx.navigateTo({
         url: '/pages/word-list/word-list?name='+e.currentTarget.dataset.name,
       })

@@ -21,14 +21,34 @@
     IELTS雅思精选词汇
   </view>
 
+<!--大学四级词汇-->
+  <view class='word-list' bindtap="toWordList" data-name='Siji'>
+  四级必备词汇
+  </view>
+
+<!--大学六级词汇-->
+  <view class='word-list' bindtap="toWordList" data-name='Liuji'>
+  六级必备词汇
+  </view>
+
 <!--记忆工具-->
 <view class='toolbox'>
+  
   <!--记忆卡片-->
-  <view class="tool" bindtap="toCards">
+  <view class="tool" bindtap="toCards" data-name='memo'>
     <view class='title'>记忆卡片</view>
     <view class='tips'>随时随地，利用碎片时间记忆单词</view>
   </view>
+
+  <!--暂时取消雅思精选词汇
+  <view class='tool' bindtap="toCards" data-name='IELTS-JX'>
+    <view class='title'>IELTS雅思精选词汇</view>
+    <view class='tips'>2088个精选雅思高频单词</view>
+  </view>-->
+
+
 </view>
+
 
 
 

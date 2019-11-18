@@ -25,6 +25,9 @@ checkToSearch(e){
 },
 
 toConfirmSearch(e){
+    this.setData({
+      
+    })
     this.getTrans(e.detail.value)
 },
 

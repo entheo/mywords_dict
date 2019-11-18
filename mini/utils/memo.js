@@ -2,7 +2,7 @@ const app = getApp()
 
 function memoDict(callback){
   wx.request({
-    url: app.globalData.host + '/memo/get_memo_dict',
+    url: app.globalData.host + '/memo/get_user_memo_dict',
     method: 'POST',
     data: {
       open_id: openid
@@ -24,7 +24,7 @@ function memoDict(callback){
 function getMemoDict(openid,p) {
   let promise = new Promise((resolve,reject)=>{
     wx.request({
-      url: app.globalData.host + '/memo/get_memo_dict',
+      url: app.globalData.host + '/memo/get_user_memo_dict',
       method: 'POST',
       data: {
         open_id: openid

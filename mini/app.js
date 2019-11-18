@@ -104,7 +104,7 @@ App({
   globalData: {
     memo_dict:'',
     userInfo: null,
-    host:'http://10.0.0.4:8000',
+    host:'http://10.0.0.5:8080',
     list: [{
         text: "词典",
         pagePath:"../index/index",  

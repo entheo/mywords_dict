@@ -1,5 +1,6 @@
 import pymongo
 import datetime
+from dict.api import YouDao
 
 def now():
     return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -57,14 +58,21 @@ class Memo(Data):
     def add(self, openid, word):
         # 检查生词是否已存在, 如果没有添加，否则返回已存在状态
         already_has_word = self.check_word(word, openid)
-        if not already_has_word:
+        # 检查是否单词是否存在
+        yd = YouDao()
+        trans = yd.get_trans(word)
+
+        if not trans:
+            return {'status': False, 'msg': 'no trans'}
+
+        elif not already_has_word and trans:
             new_words = self.find(openid)['words']
             new_words.append(word)
             self.col.update_one({'open_id': openid}, {'$set': {'words': new_words, 'updated_at': now()}})
-            return True
+            return {'status': True, 'msg': 'success'}
 
         else:
-            return False
+            return {'status': False, 'msg': 'repeated'}
 
     # 查找对应用户的生词本
     def find(self, openid):
