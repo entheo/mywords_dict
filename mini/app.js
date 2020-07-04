@@ -102,9 +102,11 @@ App({
 
   //全局变量
   globalData: {
+    memo_list:[],
     memo_dict:'',
     userInfo: null,
-    host:'http://10.0.0.5:8080',
+    //host:'http://10.0.0.9:8000',
+    host:'https://www.wetouch.club:8000',
     list: [{
         text: "词典",
         pagePath:"../index/index",  

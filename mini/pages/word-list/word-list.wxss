@@ -3,9 +3,30 @@ page{
   background-color:white
 }
 
-.memo{
-  font-size: 1.3em;
+.container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
   text-align: center;
-  padding:10px;
   line-height: 2.2;
+  padding:0
+}
+
+.item{
+  width:100%;
+  border-bottom: 1rpx solid lightgray;
+  padding:2%
+}
+
+.item text{
+  display: inline-block;
+  width:80%;
+  text-align: left;
+  padding-left:1%
+}
+
+.item icon{
+  display: inline-block;
+  width:10%;
+  padding-right:1%
 }

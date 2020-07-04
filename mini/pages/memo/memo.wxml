@@ -22,12 +22,12 @@
   </view>
 
 <!--大学四级词汇-->
-  <view class='word-list' bindtap="toWordList" data-name='Siji'>
+  <view class='word-list' bindtap="toWordList" data-name='四级必备词汇'>
   四级必备词汇
   </view>
 
 <!--大学六级词汇-->
-  <view class='word-list' bindtap="toWordList" data-name='Liuji'>
+  <view class='word-list' bindtap="toWordList" data-name='六级必备词汇'>
   六级必备词汇
   </view>
 

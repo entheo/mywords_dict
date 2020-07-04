@@ -92,12 +92,13 @@ addMemo:function(word){
     },
     success(res) {
       console.log(res.data)
-      if (res.data.res) {
+      if (res.data.res.status) {
         wx.showToast({
           title: '添加至生词本',
         })}
       else{
         wx.showToast({
+          icon:'none',
           title: '生词本中已有',
         })
         }

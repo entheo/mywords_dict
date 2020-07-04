@@ -39,29 +39,35 @@ def add_memo_dict(word):
 def find(request):
     if request.method == 'POST':
         open_id = json.loads(request.body.decode('utf-8'))['open_id']
-        m = Memo()
-        memo = m.find(open_id)
-        if memo:
-            return JsonResponse({'words': memo['words']})
-        else:
-            return False
+        words = get_memo_list(open_id)
+        return JsonResponse({'words': words})
+
+#获取openid对应的memo列表
+def get_memo_list(openid):
+    m = Memo()
+    memo = m.find(openid)
+    if memo:
+        return memo['words']
+    else:
+        return False
 
 
 # 获取一个用户的生词字典
-def get_memo_dict(request):
+def get_user_memo_dict(request):
     if request.method == 'POST':
         open_id = json.loads(request.body.decode('utf-8'))['open_id']
         res = []
         m = Memo()
         d = Dict()
         memo = m.find(open_id)
-        print(memo, memo['words'], open_id)
         if memo and memo['words']:
+            print('memo')
             for w in memo['words']:
                 word = d.col.find_one({'word': w}, {'word': 1, 'trans': 1, 'pronounce': 1, '_id': 0})
 
                 # 将word的trans数量限制在两个以内
                 trans = word['trans']
+                print(trans)
                 trans.sort(key=lambda i: len(i))
                 if len(trans) > 2:
                     word['trans'] = trans[0:1]
@@ -81,6 +87,7 @@ def delete_memo_word(request):
         m = Memo()
         if m.find(open_id):
             m.delete_word(word, open_id)
-            return JsonResponse({'res': True})
+            words = get_memo_list(open_id)
+            return JsonResponse({'status': True,'words':words})
         else:
-            return JsonResponse({'res': False})
+            return JsonResponse({'status': False})

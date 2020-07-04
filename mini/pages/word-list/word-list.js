@@ -16,10 +16,51 @@ Page({
 
   },
 
+  deleteWord(e){
+    var word = e.currentTarget.dataset.word
+    var that = this
+
+    wx.showModal({
+      title:'提示',
+      content:'确实删除这个生词么？',
+      success(res){
+        if(res.confirm){
+          wx.request({
+            method:'POST',
+            url: app.globalData.host+'/memo/delete_memo_word',
+            data: {
+              word: word,
+              open_id: wx.getStorageSync('open_id'),
+            },
+            success(res){
+              console.log(res.data)
+              if(res.data.status){
+                app.globalData.memo_list=res.data.words
+                that.setData({
+                  word_list:app.globalData.memo_list
+                })
+              }
+            }
+          })
+        }
+        else if(res.cancel){
+          console.log('用户放弃删除')
+        }
+      }
+    })
+
+   
+
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //修改title
+    wx.setNavigationBarTitle({
+      title: options.name  
+    })
     console.log(options)
     if(options.words){
       this.setData({

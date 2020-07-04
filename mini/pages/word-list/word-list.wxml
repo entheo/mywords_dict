@@ -1,6 +1,9 @@
 <!--pages/word-list/word-list.wxml-->
-<view class='memo'>
+<view class='container'>
 <block wx:for='{{word_list}}' wx:key='id'>
-  <view class='line' bindtap="toSearch" data-word='{{item}}' >{{item}}</view>
+  <view class='item'>
+    <text bindtap='toSearch' data-word='{{item}}'>{{item}}</text>
+    <icon type='cancel' size="15" color='lightgray' bindtap='deleteWord' data-word='{{item}}'></icon>
+  </view>
 </block>
 </view>

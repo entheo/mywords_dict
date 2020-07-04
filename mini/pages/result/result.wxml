@@ -2,11 +2,8 @@
 <view class='searchbar'>
 <form bindsubmit='toSearch'>
   <view class="input-area">
-    <input name='word' value='{{word}}' bindconfirm="toConfirmSearch" focus='{{focus}}'></input>
+    <input name='word' value='{{word}}' bindconfirm="toConfirmSearch" focus='{{focus}}'/>
     <icon type="clear" size="15" bindtap="toClear"></icon>
-    <!--
-    <view id="clear" bindtap="toClear">  
-    </view>-->
   </view>
 </form>
 </view>
@@ -47,6 +44,7 @@
       </block>
   </view>
 </view>
+<button open-type="contact">有问题？咨询客服</button>
 
 </scroll-view>
 
@@ -54,7 +52,7 @@
 <!--加入生词本-->
 <view wx:if='{{show}}' class='add-memo' data-word='{{word}}' bindtap="toAddMemo">
   <view >加入生词本</view>
-  <view class='add-memo-icon' data-word='{{word}}' bindtap='toAddMemo'></view> 
+  <view class='add-memo-icon' data-word='{{word}}'></view> 
 </view>
 
 

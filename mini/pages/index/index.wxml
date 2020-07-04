@@ -1,28 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-<!--
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}{{userInfo.openid}}</text>
-    </block>
-  </view>-->
+  
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
 
-<!--搜索框-->
-<view class='search-bar'>
-  <form bindsubmit='toSearch'>
-    <view class='input-area'>
-      <input name='word' placeholder='{{placeholder}}' value='{{word}}' bindconfirm="toConfirmSearch"></input>
-      <button class='search-btn' form-type="submit"><icon type="search" color='white' size="20" bindtap=""></icon></button>
-    </view>
-  </form>
-</view> 
+  <!--搜索框-->
+  <view class='search-bar'>
+    <form bindsubmit='toSearch'>
+      <view class='input-area'>
+        <input name='word' placeholder='{{placeholder}}' value='{{word}}' bindconfirm="toConfirmSearch"/>
+        <button class='search-btn' form-type="submit"><icon type="search" color='white' size="20" bindtap=""></icon></button>
+      </view>
+    </form>
+  </view> 
+
 </view>
-
-
-
-

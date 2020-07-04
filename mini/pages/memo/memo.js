@@ -25,10 +25,11 @@ Page({
         open_id:openid
       },
       success(res){
-        console.log(res)
+        console.log(res.data)
+        app.globalData.memo_list=res.data.words
         that.setData({
-          words:res.data.words,
-          num:res.data.words.length
+          words:app.globalData.memo_list,
+          num:app.globalData.memo_list.length
         })
         if (res.data.words){
           that.setData({
@@ -75,7 +76,7 @@ Page({
     }
     else{
       wx.navigateTo({
-        url: '/pages/word-list/word-list?words=' + JSON.stringify(this.data.words),
+        url: '/pages/word-list/word-list?words=' + JSON.stringify(app.globalData.memo_list),
       })
     }
   },
